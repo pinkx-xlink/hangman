@@ -7,7 +7,7 @@ import Word from './components/Word';
 import './App.css';
 
 const words = ['application', 'programming', 'interface', 'wizard'];
-let selectWord = words[(Math.random() * words.length)];
+let selectedWord = words[(Math.random() * words.length)];
 
 let playable = true;
 
@@ -24,7 +24,7 @@ function App() {
       <div className="game-container">
         <Figure />  
         <WrongLetters />
-        <Word />
+        <Word selectedWord={selectedWord} correctLetters={correctLetters}/>
       </div>
     </>
   );
