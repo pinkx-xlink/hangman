@@ -2,9 +2,10 @@ import React from 'react'
 
 const Header = () => {
     return (
-        <div>
-        
-        </div>
+        <>
+        <h1>Hangman</h1>
+        <p> Find the hidden word, guess a letter</p>
+        </>
     )
 }
 
