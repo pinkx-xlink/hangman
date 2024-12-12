@@ -1,8 +1,16 @@
 import React from "react";
 
-function Word() {
+function Word({ selectedWord, correctLetters }) {
     return (
-        <div class="word" id="work"></div>
+        <div className="word">
+            {selectedWord.split('').map( (letter, i) => {
+                return (
+                <span className="letter" key={i}>
+                  {correctLetters.includes(letter) ? letter : ''}
+                </span>
+                )
+            })}
+        </div>
     )
 }
 
