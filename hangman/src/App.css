@@ -1,0 +1,11 @@
+.game-container {
+  background-color: pink;
+}  
+.figure-container {
+  background-color: rgb(197, 197, 233);
+}
+
+.figure-part {
+  background-color: red;
+  color: red;
+}

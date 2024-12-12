@@ -1,8 +1,8 @@
-import React from "react";
+import React from "react"
 
 const Figure = () => {
     return (
-        <svg neight="250" width="200" class="figure-container">
+        <svg height="250" width="200" class="figure-container">
             {/* Rod */}
             <line x1="60" y1="20" x2="140" y2="20" />
             <line x1="140" y1="20" x2="140" y2="50" />
@@ -19,7 +19,6 @@ const Figure = () => {
             {/* Legs */}
             <line x1="140" y1="150" x2="120" y2="180" class="figure-part" />
             <line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
-        
         </svg>
     )
 }
