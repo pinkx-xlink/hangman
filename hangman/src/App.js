@@ -23,15 +23,12 @@ function App() {
     const handleKeydown = event => {
       const { key, keyCode } = event;
       window.addEventListener('keydown', e => {
-        if () {
-          if (playable && keycode >= 65 && e.keycode <= 90) {
+        if (playable && keycode >= 65 && e.keycode <= 90) {
             const letter = e.key.toLowerCase();
     
             if(selectedWord.includes(letter)) {
               if (!correctLetters.includes(letter)) {
                 setCorrectLetters(currentLetters => [...currentLetters, letter]);
-    
-                // displayWord();
               } else {
                 // showNotification();
               } 
@@ -44,11 +41,13 @@ function App() {
               }
             }
           }
-          
-  });
+          window.addEventListener('keydown', handleKeydown);
 
-  
-  })
+          return () => window.removeEventListener('keydown', handleKeydown);
+      // )} // not in tutorial but needed for my code?              
+  }, [correctLetters, wrongLetters, playable]);
+
+
   return (
     <>
       <Header />
