@@ -6,6 +6,14 @@ import Word from './components/Word';
 
 import './App.css';
 
+const words = ['application', 'programming', 'interface', 'wizard'];
+let selectWord = words[(Math.random() * words.length)];
+
+let playable = true;
+
+const correctLetters = [];
+const wrongLetters = [];
+
 function App() {
   return (
     <>
