@@ -37,14 +37,13 @@ function App() {
                   setWrongLetters(wrongLetters => [...wrongLetters, letter]);
                 } else {
                   // showNotification();
-                }
-              }
             }
           }
-          window.addEventListener('keydown', handleKeydown);
+        }
+    }
+    window.addEventListener('keydown', handleKeydown);
 
-          return () => window.removeEventListener('keydown', handleKeydown);
-      // )} // not in tutorial but needed for my code?              
+    return () => window.removeEventListener('keydown', handleKeydown);             
   }, [correctLetters, wrongLetters, playable]);
 
 
