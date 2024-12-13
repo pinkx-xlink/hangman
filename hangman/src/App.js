@@ -31,7 +31,7 @@ function App() {
             } 
           } else {
               if (!wrongLetters.includes(letter)) {
-                setWrongLetters(currentLetters => [...wrongLetters, letter]);
+                setWrongLetters(currentLetters => [...currentLetters, letter]);
                } else {
                 show(setShowNotification);
            }
@@ -54,6 +54,7 @@ function App() {
     const random = Math.floor(Math.random() * words.length);
     selectedWord = words[random];
   }
+
   return (
     <>
       <Header />
@@ -62,8 +63,7 @@ function App() {
         <WrongLetters wrongLetters={wrongLetters} />
         <Word selectedWord={selectedWord} correctLetters={correctLetters} />
       </div>
-      <Popup correctLetters={correctLetters} wrongLetters={wrongLetters} selectedWord=
-      {selectedWord} setPlayable={setPlayable} playAgain={playAgain}} />
+      <Popup correctLetters={correctLetters} wrongLetters={wrongLetters} selectedWord={selectedWord} setPlayable={setPlayable} playAgain={playAgain}} />
       <Notification showNotification={showNotification} />
     </>
   );

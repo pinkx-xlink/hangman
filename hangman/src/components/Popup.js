@@ -9,16 +9,18 @@ const Popup = ({ correctLetters, wrongLetters, selectedWord, setPlayable, playAg
     if( checkWin(correctLetters, wrongLetters, selectedWord) === 'win') {
         finalMessage = 'Congrats you won';
         playable = false;
-    } else if ( checkWin(correctLetters, wrongLetters, selectedWord) === 'lose') {
+    } else if( checkWin(correctLetters, wrongLetters, selectedWord) === 'lose') {
         finalMessage = 'You lost';
         finalMessageRevealWord = `... the word was ${selectedWord}`;
         playable = false;
     }
 
-    useEffect(() => setPlayable(playable));
+    useEffect(() => {
+        setPlayable(playable)
+    });
 
     return (
-        <div className="popup-container" style={finalMessage !=== '' ? {display: 'flex'} : {}}>
+        <div className="popup-container" style={finalMessage !== '' ? {display: 'flex'} : {}}>
             <div className="popup">
                 <h2>{finalMessage}</h2>
                 <h3>{finalMessageRevealWord}</h3>
