@@ -1,8 +1,8 @@
 import React from "react";
 
-const Notification = () => {
+const Notification = ({ showNotification }) => {
     return (
-        <div class="notifications-container" id="notifications-container">
+        <div className={`notifications-container ${showNotification ? 'show' : ''}`}>
             <p>You have already entered this letter</p>
         </div>
     )
