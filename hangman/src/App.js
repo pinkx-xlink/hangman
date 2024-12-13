@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Figure from './components/Figure';
 import WrongLetters from './components/WrongLetters';
 import Word from './components/Word';
+import showNotification from './helpers/helpers';
 
 import './App.css';
 
