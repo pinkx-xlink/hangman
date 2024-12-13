@@ -17,9 +17,8 @@ function App() {
   useEffect(() => {
     const handleKeydown = event => {
       const { key, keyCode } = event;
-      window.addEventListener('keydown', e => {
-        if (playable && keycode >= 65 && e.keycode <= 90) {
-            const letter = e.key.toLowerCase();
+        if (playable && keyCode >= 65 && keyCode <= 90) {
+          const letter = key.toLowerCase();
     
             if(selectedWord.includes(letter)) {
               if (!correctLetters.includes(letter)) {
