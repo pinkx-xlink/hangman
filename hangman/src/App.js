@@ -5,7 +5,7 @@ import WrongLetters from './components/WrongLetters';
 import Word from './components/Word';
 import Notification from './components/Notification';
 import Popup from './components/Popup';
-import {showNotification as show} from './helpers/helpers';
+import {showNotification as show, checkWin} from './helpers/helpers';
 
 import './App.css';
 

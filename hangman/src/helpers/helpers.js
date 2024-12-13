@@ -1,4 +1,4 @@
-function showNotification(setter) {
+export function showNotification(setter) {
   setter(true);
   setTimeout(() => {
     setter(false);
@@ -15,10 +15,10 @@ export function checkWin(correct, wrong, word) {
     if(!correct.includes(letter)){
       status = '';
     }
-  })
+  });
 
   // check for loss - we lost. 
   if(wrong.length === 6) status = 'lose';
 
-  return status;
+  return status
 }
